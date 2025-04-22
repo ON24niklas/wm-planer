@@ -1,13 +1,28 @@
-// Imports use relative file paths or Node.js package names
-import { textInput } from './dom-utils';
-// CSS IMPORT IN TS NUR ÜBER VITE MÖGLICH
-import './styles/styles.css';
-
-
-//THIS IS THE ENTRY FILE - WRITE YOUR MAIN LOGIC HERE
-
-// init App
-textInput.addEventListener('input', (e) => {
-    //log input value
-    console.log((e.target as HTMLInputElement).value);
-})
+import { groups } from './data/matches';
+function showGroups() {
+    const container = document.getElementById('groups-container');
+  
+    if (!container) return;
+  
+    groups.forEach((group, index) => {
+      const groupDiv = document.createElement('div');
+      groupDiv.className = 'group';
+      
+      const title = document.createElement('h2');
+      title.textContent = `Gruppe ${String.fromCharCode(65 + index)}`;
+      groupDiv.appendChild(title);
+  
+      const list = document.createElement('ul');
+      group.teams.forEach((team) => {
+        const listItem = document.createElement('li');
+        listItem.textContent = team;
+        list.appendChild(listItem);
+      });
+  
+      groupDiv.appendChild(list);
+      container.appendChild(groupDiv);
+    });
+  }
+  
+  showGroups();
+  
