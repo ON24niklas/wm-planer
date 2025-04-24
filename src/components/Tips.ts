@@ -30,3 +30,40 @@ export function createTipInput() {
     container.appendChild(input);
     container.appendChild(button);
 }
+
+// Tipps speichern
+function saveTips(tips: string[]) {
+    localStorage.setItem('userTips', JSON.stringify(tips));  // Speichert die Tipps als JSON-String
+  }
+  
+  // Tipps aus dem localStorage abrufen
+  function loadTips(): string[] {
+    const savedTips = localStorage.getItem('userTips');
+    return savedTips ? JSON.parse(savedTips) : [];  // Gibt die gespeicherten Tipps oder ein leeres Array zurück
+  }
+
+// Beispiel, wie Tipps gespeichert werden:
+const tips: string[] = [];
+
+// Wenn der Benutzer einen Tipp hinzufügt:
+function handleTipInput(tip: string) {
+  tips.push(tip);
+  saveTips(tips); // Speichern der Tipps im localStorage
+}
+
+// Laden der gespeicherten Tipps beim Start der Seite:
+const loadedTips = loadTips(); // Holt die gespeicherten Tipps beim Laden der Seite
+console.log(loadedTips); // Gibt die gespeicherten Tipps in der Konsole aus
+
+const tipsList = loadTips();
+
+const tipsContainer = document.getElementById('tips-list');
+if (tipsContainer) {
+  tipsList.forEach(tip => {
+    const listItem = document.createElement('li');
+    listItem.textContent = tip;
+    tipsContainer.appendChild(listItem);
+  });
+}
+
+
