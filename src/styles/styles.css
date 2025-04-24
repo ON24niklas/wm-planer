@@ -32,4 +32,33 @@ body {
     padding: 0.25rem 0;
     border-bottom: 1px solid #eee;
   }
-  
+
+
+.match-entry {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.match-entry label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.match-entry input {
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.match-entry button {
+  padding: 5px 10px;
+  margin-top: 5px;
+}
+
+.match-entry span {
+  margin-left: 10px;
+  font-style: italic;
+  color: #333;
+}
+
