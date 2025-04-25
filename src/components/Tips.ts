@@ -1,5 +1,5 @@
 // Import von Spieldaten und dem Match-Typ
-import { matchday1, matchday2, Match } from '/Users/niklas.fcb/wm-planer/src/data/matches.ts'; 
+import { matchday1, matchday2, matchday3, Match } from '/Users/niklas.fcb/wm-planer/src/data/matches.ts'; 
 
 // Button für Spieltag 1
 document.getElementById('showMatchday1')?.addEventListener('click', () => {
@@ -19,6 +19,16 @@ document.getElementById('showMatchday2')?.addEventListener('click', () => {
         container.innerHTML = ''; // Löscht den aktuellen Inhalt
     }
     renderMatchdayTips(matchday2); // Zeigt Spieltag 2 an
+});
+
+// Button für Spieltag 3
+document.getElementById('showMatchday3')?.addEventListener('click', () => {
+    // Vorherigen Inhalt löschen, bevor Spieltag 3 angezeigt wird
+    const container = document.getElementById('tip-input-container');
+    if (container) {
+        container.innerHTML = ''; // Löscht den aktuellen Inhalt
+    }
+    renderMatchdayTips(matchday3); // Zeigt Spieltag 3 an
 });
 
 // Funktion zur Darstellung und Bearbeitung der Tipps für den 1. Spieltag

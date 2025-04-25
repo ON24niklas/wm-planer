@@ -46,3 +46,18 @@ export const groups = [
     { id: 'match-024', date: '28.12.2025', group: 'F', team1: 'Elfenbeinküste', team2: 'Kamerun' },
   ];
 
+  export const matchday3: Match[] = [
+    { id: 'match-025', date: '29.12.2025', group: 'B', team1: 'Angola', team2: 'Ägypten' },
+    { id: 'match-026', date: '29.12.2025', group: 'A', team1: 'Sambia', team2: 'Marokko' },
+    { id: 'match-027', date: '29.12.2025', group: 'B', team1: 'Simbabwe', team2: 'Südafrika' },
+    { id: 'match-028', date: '29.12.2025', group: 'A', team1: 'Komoren', team2: 'Mali' },
+    { id: 'match-029', date: '30.12.2025', group: 'C', team1: 'Uganda', team2: 'Nigeria' },
+    { id: 'match-030', date: '30.12.2025', group: 'D', team1: 'Botswana', team2: 'DR Kongo' },
+    { id: 'match-031', date: '30.12.2025', group: 'C', team1: 'Tansania', team2: 'Tunesien' },
+    { id: 'match-032', date: '30.12.2025', group: 'D', team1: 'Benin', team2: 'Senegal' },
+    { id: 'match-033', date: '31.12.2025', group: 'E', team1: 'Äquatorialguinea', team2: 'Algerien' },
+    { id: 'match-034', date: '31.12.2025', group: 'E', team1: 'Sudan', team2: 'Burkina Faso' },
+    { id: 'match-035', date: '31.12.2025', group: 'F', team1: 'Gabun', team2: 'Elfenbeinküste' },
+    { id: 'match-036', date: '31.12.2025', group: 'F', team1: 'Mosambik', team2: 'Kamerun' },
+  ];
+  
