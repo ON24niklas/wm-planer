@@ -1,9 +1,10 @@
 import { renderGroups } from "./components/Groups";
-import { createTipInput } from './components/Tips';
-import { renderMatchdayTips } from '/Users/niklas.fcb/wm-planer/src/components/Tips.ts';
+import { renderMatchdayTips } from './components/Tips';
+import { matchday1 } from './data/matches';
 
-renderGroups(); // Zeigt die Gruppen mit je 4 Teams an
-createTipInput(); // Zeigt das Eingabefeld und den Button für Tipps an
+renderGroups();
+
 document.addEventListener('DOMContentLoaded', () => {
     renderMatchdayTips();
   });
+
